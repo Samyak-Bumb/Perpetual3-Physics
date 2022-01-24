@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: #1c1f2f;
+	overflow: hidden;
+}
+.main{
+	position: relative;
+	transform: translateY(-100px);
+}
+.main::before{
+	content: '';
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 200px;
+	border-radius: 50%;
+	background: #eee;
+	animation: ani3 4s ease-in-out infinite;
+}
+@keyframes ani3{
+	0%{
+		transform: translateX(15px);
+	}
+	50%{
+		transform: translateX(-15px);
+	}
+	100%{
+		transform: translateX(15px);
+	}
+}
+.main::after{
+	content: '';
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	top: 400px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	background: #fe4e4e;
+}
+.main .loader{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	animation: ani 4s ease-in-out infinite;
+}
+@keyframes ani{
+	0%{
+		transform: rotate(50deg);
+	}
+	50%{
+		transform: rotate(-50deg);
+	}
+	100%{
+		transform: rotate(50deg);
+	}
+}
+.main .loader::before{
+	content: '';
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	bottom: 0;
+	border-radius: 0 0 100px 100px;
+	background: #06c8f0;
+}
+.main .loader .ball{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: -15px;
+	transform: translateY(-100%);
+	border-radius: 50%;
+	background: #f5f5f5;
+	animation: ani2 4s ease-in-out infinite;
+}
+@keyframes ani2{
+	0%{
+		transform: translateY(-100%) translateX(-30px);
+	}
+	50%{
+		transform: translateY(-100%) translateX(220px);
+	}
+	100%{
+		transform: translateY(-100%) translateX(-30px);
+	}
+}
